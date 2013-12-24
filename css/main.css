@@ -1,0 +1,826 @@
+@charset "UTF-8";
+/**
+* AeonGrid - Simple Fast Intuitive.
+* --------------------------------------------------
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+/** Simple Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Clearfix Helper */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* Img Helper */
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  height: 100%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* IE10 on Windows Phone 8 fix for pixel viewport problem */
+@-ms-viewport {
+  width: device-width;
+}
+
+@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: 320px;
+}
+}
+/** Core Grid System*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  zoom: 1;
+  max-width: 980px;
+  width: auto;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  .container {
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+
+.row {
+  zoom: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+[class*="col"] {
+  float: left;
+  min-height: 1px;
+  padding: 0 10px;
+}
+[class*="col"]:last-child {
+  float: right;
+}
+
+.container [class*="col"] {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+@media screen and (max-width: 767px) {
+  .container [class*="col"] {
+    float: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.col1 {
+  width: 8.33333%;
+}
+
+.col2 {
+  width: 16.66667%;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.col4 {
+  width: 33.33333%;
+}
+
+.col5 {
+  width: 41.66667%;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col7 {
+  width: 58.33333%;
+}
+
+.col8 {
+  width: 66.66667%;
+}
+
+.col9 {
+  width: 75%;
+}
+
+.col10 {
+  width: 83.33333%;
+}
+
+.col11 {
+  width: 91.66667%;
+}
+
+.col12 {
+  width: 100%;
+}
+
+/** Core Typograph System*/
+/* Include font-faces*/
+@font-face {
+  font-family: "sansa_soft_stdlight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/sansasoft-light-webfont.eot") format("eot"), url("../fonts/sansasoft-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sansasoft-light-webfont.woff") format("woff"), url("../fonts/sansasoft-light-webfont.ttf") format("truetype"), url("../fonts/sansasoft-light-webfont.svg#sansasoft-light-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "sansa_soft_stdsemibold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/sansasoft-semibold-webfont.eot") format("eot"), url("../fonts/sansasoft-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sansasoft-semibold-webfont.woff") format("woff"), url("../fonts/sansasoft-semibold-webfont.ttf") format("truetype"), url("../fonts/sansasoft-semibold-webfont.svg#sansasoft-semibold-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/OpenSans-Regular-webfont.eot") format("eot"), url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#OpenSans-Regular-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-Italic";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/OpenSans-Italic-webfont.eot") format("eot"), url("../fonts/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Italic-webfont.woff") format("woff"), url("../fonts/OpenSans-Italic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Italic-webfont.svg#OpenSans-Italic-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/OpenSans-Light-webfont.eot") format("eot"), url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#OpenSans-Light-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-LightItalic";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../fonts/OpenSans-LightItalic-webfont.eot") format("eot"), url("../fonts/OpenSans-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-LightItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-LightItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-LightItalic-webfont.svg#OpenSans-LightItalic-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-Semibold";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/OpenSans-Semibold-webfont.eot") format("eot"), url("../fonts/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Semibold-webfont.svg#OpenSans-Semibold-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-SemiboldItalic";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/OpenSans-SemiboldItalic-webfont.eot") format("eot"), url("../fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-SemiboldItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-SemiboldItalic-webfont.svg#OpenSans-SemiboldItalic-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/OpenSans-Bold-webfont.eot") format("eot"), url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#OpenSans-Bold-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-BoldItalic";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/OpenSans-BoldItalic-webfont.eot") format("eot"), url("../fonts/OpenSans-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-BoldItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-BoldItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-BoldItalic-webfont.svg#OpenSans-BoldItalic-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/OpenSans-ExtraBold-webfont.eot") format("eot"), url("../fonts/OpenSans-ExtraBold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-ExtraBold-webfont.woff") format("woff"), url("../fonts/OpenSans-ExtraBold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-ExtraBold-webfont.svg#OpenSans-ExtraBold-webfont") format("svg");
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBoldItalic";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/OpenSans-ExtraBoldItalic-webfont.eot") format("eot"), url("../fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-ExtraBoldItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-ExtraBoldItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSans-ExtraBoldItalic-webfont") format("svg");
+}
+
+/* General Body Style*/
+body {
+  font-family: "OpenSans-Light", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #444444;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smooth: always;
+}
+
+/** Paragraph */
+p {
+  margin: 0 0 1.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+p.justify {
+  text-align: justify;
+  text-rendering: auto;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px auto;
+  font-family: "OpenSans-Semibold", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/** Links */
+a {
+  color: #06c;
+  text-decoration: underline;
+}
+a:focus {
+  color: #09f;
+}
+a:hover {
+  color: #09f;
+}
+
+/** Micelaneus */
+strong, dfn {
+  font-weight: bold;
+}
+
+em, dfn {
+  font-style: italic;
+}
+
+sup, sub {
+  line-height: 0;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+}
+
+address {
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+
+del {
+  color: #666;
+}
+
+pre {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+
+pre, code, tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
+  line-height: 1.5;
+}
+
+/** List */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  padding-left: 20px;
+}
+
+blockquote {
+  font-family: "OpenSans-SemiboldItalic", Helvetica, Arial, sans-serif;
+  padding-left: 20px;
+  margin: 1.5em;
+  font-style: italic;
+  border-left: 1px solid;
+  font-style: italic;
+}
+
+blockquote + figcaption {
+  display: block;
+  font-size: inherit;
+  text-align: right;
+}
+
+blockquote + figcaption:before {
+  content: "-";
+  /* "-" is your citation flourish */
+}
+
+figcaption {
+  background-color: #f2f2f2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #373737;
+}
+figcaption.center {
+  text-align: center;
+}
+
+/* typography.css */
+html {
+  font-size: 100.01%;
+}
+
+li ul, li ol {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 1.5em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+dl {
+  margin: 0 0 1.5em 0;
+}
+
+dl dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1.5em;
+}
+
+table {
+  margin-bottom: 1.4em;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+}
+
+thead th {
+  background: #c3d9ff;
+}
+
+th, td, caption {
+  padding: 4px 10px 4px 5px;
+}
+
+tbody tr:nth-child(even) td, tbody tr.even td {
+  background: #e5ecf9;
+}
+
+tfoot {
+  font-style: italic;
+}
+
+caption {
+  background: #eee;
+}
+
+.small {
+  font-size: .8em;
+  margin-bottom: 1.875em;
+  line-height: 1.875em;
+}
+
+.large {
+  font-size: 1.2em;
+  line-height: 2.5em;
+  margin-bottom: 1.25em;
+}
+
+.hide {
+  display: none;
+}
+
+.quiet {
+  color: #666;
+}
+
+.loud {
+  color: #000;
+}
+
+.highlight {
+  background: #ff0;
+}
+
+.added {
+  background: #060;
+  color: #fff;
+}
+
+.removed {
+  background: #900;
+  color: #fff;
+}
+
+.first {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.last {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/** Style */
+/** Background - Color - Position - Sizes - Blocks*/
+/** Font-icons */
+@font-face {
+  font-family: 'fontello';
+  src: url("../font-icon/fontello.eot?93050883");
+  src: url("../font-icon/fontello.eot?93050883#iefix") format("embedded-opentype"), url("../font-icon/fontello.woff?93050883") format("woff"), url("../font-icon/fontello.ttf?93050883") format("truetype"), url("../font-icon/fontello.svg?93050883#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?93050883#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-code:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-modular:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-github:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-twitter:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-resize:before {
+  content: '\e802';
+}
+
+/* '' */
+::-moz-selection {
+  color: gold;
+  background: red;
+}
+
+::-webkit-selection {
+  color: gold;
+  background: red;
+}
+
+::selection {
+  color: gold;
+  background: red;
+}
+
+/** Style Header*/
+header {
+  background-color: #044988;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #044988), color-stop(100%, #058799));
+  background-image: -webkit-linear-gradient(#044988, #058799);
+  background-image: -moz-linear-gradient(#044988, #058799);
+  background-image: -o-linear-gradient(#044988, #058799);
+  background-image: linear-gradient(#044988, #058799);
+  max-height: 400px;
+}
+@media screen and (max-width: 767px) {
+  header {
+    max-height: 330px;
+  }
+}
+
+.call {
+  margin: 25px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.call-image {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+}
+.call-image p {
+  font-size: 1.25em;
+  line-height: 24px;
+  line-height: 1.5rem;
+  color: #ffffff;
+  position: relative;
+  top: 55px;
+}
+@media screen and (max-width: 767px) {
+  .call-image p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 981px) {
+  .call-image {
+    background: url(../images/desktop.png) no-repeat;
+    width: 410px;
+    height: 310px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .call-image {
+    background: url(../images/tablet.png) no-repeat;
+    width: 240px;
+    height: 310px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .call-image {
+    background: url(../images/mobile.png) no-repeat;
+    width: 150px;
+    height: 258px;
+  }
+}
+
+.slogan {
+  font-size: 60px;
+  font-size: 3.75rem;
+  font-family: "OpenSans-Light", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+  -webkit-transition-property: font-size;
+  -moz-transition-property: font-size;
+  -o-transition-property: font-size;
+  transition-property: font-size;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+}
+@media screen and (max-width: 767px) {
+  .slogan {
+    font-size: 33px;
+    font-size: 2.0625rem;
+    -webkit-transition-property: font-size;
+    -moz-transition-property: font-size;
+    -o-transition-property: font-size;
+    transition-property: font-size;
+    -webkit-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    transition-duration: 2s;
+  }
+}
+
+.features {
+  margin: 60px auto;
+  padding-bottom: 1.5;
+  border-bottom: thin solid #eee;
+}
+@media screen and (max-width: 767px) {
+  .features {
+    margin: 35px auto;
+  }
+}
+.features .col4 {
+  padding: 20px 0;
+}
+
+.icon-code, .icon-modular, .icon-resize {
+  font-size: 56px;
+  font-size: 3.5rem;
+}
+
+.code, .modular, .resize {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.green {
+  color: #009779;
+}
+
+.blue {
+  color: #0181BD;
+}
+
+.orange {
+  color: #f60;
+}
+
+.center-blocks {
+  text-align: center;
+}
+
+.grid > .row > [class*="col"] {
+  min-height: 50px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+.grid > .row > [class*="col"]:hover {
+  color: #0181BD;
+  background-color: #eee;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  font-size: 1.5em;
+  cursor: pointer;
+}
