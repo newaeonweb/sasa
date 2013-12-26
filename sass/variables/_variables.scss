@@ -9,7 +9,7 @@ $tablet-padding: 20px;
 
 // ! Responsive helper variables
 // -----------------------------
-$devices: mobile, mobile-tablet, tablet, tablet-desktop, desktop;
+$devices: mobile, mobile-tablet, tablet, tablet-desktop, desktop, pixel-ratio, device-width;
 $mobile-end: $responsive-breakpoint;
 $tablet-start: $mobile-end + 1;
 $tablet-end: $page-width + ($column-gutter * 2);

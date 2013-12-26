@@ -154,12 +154,12 @@ img {
     margin-right: 0;
   }
 }
-[class*="col"] {
+.container [class*="col"] {
   float: left;
   min-height: 1px;
   padding: 0 10px;
 }
-[class*="col"]:last-child {
+.container [class*="col"]:last-child {
   float: right;
 }
 
@@ -316,7 +316,7 @@ img {
 body {
   font-family: "OpenSans-Light", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1em;
   color: #444444;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -461,6 +461,7 @@ figcaption {
   padding-bottom: 10px;
   padding-left: 5px;
   padding-right: 5px;
+  width: 100%;
   font-size: 14px;
   font-size: 0.875rem;
   color: #373737;
@@ -472,6 +473,11 @@ figcaption.center {
 /* typography.css */
 html {
   font-size: 100.01%;
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 99%;
+  }
 }
 
 li ul, li ol {

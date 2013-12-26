@@ -69,4 +69,11 @@
 	@if $device == "mobile" {
 		@media screen and (max-width: $mobile-end) { @content }
 	}
+
+	@if $device == "pixel-ratio" {
+		@media only screen and (-webkit-min-device-pixel-ratio : 2) { @content }
+	}
+	@if $device == "device-width" {
+		@media only screen and (max-device-width: 480px) { @content }
+	}
 }
