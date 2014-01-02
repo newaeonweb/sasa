@@ -1,7 +1,7 @@
 SASa Grid-Block!
 ====
 
-## Modular SCSS components.
+## Modular SCSS Experiments.
 > work in progress
 
 ## Contributing

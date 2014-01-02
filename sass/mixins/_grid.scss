@@ -76,4 +76,7 @@
 	@if $device == "device-width" {
 		@media only screen and (max-device-width: 480px) { @content }
 	}
+	@if $device == "customsize" {
+		@media screen and (max-width: $customsize) { @content }
+	}
 }

@@ -42,30 +42,45 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 10px auto;
 	font-family: $headings-font-family;
 	text-rendering: optimizelegibility;
+	line-height: 1.2em;
 
 	& small {
 		font-weight: normal;
-	}
+	}	
 }
 
 h1 {
 	font-size: $body-font-size + 2;
-	line-height: 1;
 	margin-bottom: 0.5em;
+
+	@include respond-to(mobile) {
+      font-size: $body-font-size + 1;
+  }
 }
 h2 {
 	font-size: $body-font-size + 1;
 	margin-bottom: 0.75em;
+
+	@include respond-to(mobile) {
+      font-size: $body-font-size + .5;
+  }
 }
 h3 {
 	font-size: $body-font-size + .5;
-	line-height: 1;
 	margin-bottom: 1em;
+
+	@include respond-to(mobile) {
+      font-size: $body-font-size + .3;
+  }
 }
 h4 {
 	font-size: $body-font-size + .2;
 	line-height: 1.25;
 	margin-bottom: 1.25em;
+
+	@include respond-to(mobile) {
+      font-size: $body-font-size + .1;
+  }
 }
 h5 {
 	font-size: $body-font-size;

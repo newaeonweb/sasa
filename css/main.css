@@ -316,7 +316,7 @@ img {
 body {
   font-family: "OpenSans-Light", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1.5em;
   color: #444444;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -339,6 +339,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px auto;
   font-family: "OpenSans-Semibold", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
+  line-height: 1.2em;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: normal;
@@ -346,25 +347,43 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 h1 {
   font-size: 3em;
-  line-height: 1;
   margin-bottom: 0.5em;
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2em;
+  }
 }
 
 h2 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1em;
+  }
+}
 
 h3 {
   font-size: 1em;
-  line-height: 1;
   margin-bottom: 1em;
+}
+@media screen and (max-width: 767px) {
+  h3 {
+    font-size: 1em;
+  }
 }
 
 h4 {
   font-size: 1em;
   line-height: 1.25;
   margin-bottom: 1.25em;
+}
+@media screen and (max-width: 767px) {
+  h4 {
+    font-size: 1em;
+  }
 }
 
 h5 {
@@ -703,6 +722,12 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+}
+@media screen and (max-width: 319px) {
+  .call {
+    margin: 15px auto;
+    padding-top: 0;
+  }
 }
 
 .call-image {

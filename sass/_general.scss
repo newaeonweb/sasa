@@ -79,6 +79,13 @@ header {
   padding-top:10px;
   padding-bottom: 10px;
   text-align: center;
+
+
+
+  @include respond-to(customsize) {
+    margin:15px auto;
+    padding-top:0;
+  }
 }
 .call-image {
   display: block;
