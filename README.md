@@ -2,7 +2,7 @@ SASa Grid-Block!
 ====
 
 ## Modular SCSS Experiments.
-> work in progress
+> work in progress...
 
 ### Tested on:
 
@@ -10,8 +10,8 @@ SASa Grid-Block!
 * iPhone 3+4 landscape · width: 480px
 * iPhone 5 portrait · width: 320px
 * iPhone 5 landscape · width: 568px
-* Crappy Android portrait · width: 240px
-* Crappy Android landscape · width: 320px
+* Android portrait · width: 240px
+* Android landscape · width: 320px
 * Android (Nexus 4) portrait · width: 384px
 * Android (Nexus 4) landscape · width: 600px
 * iPad portrait · width: 768px

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-* AeonGrid - Simple Fast Intuitive.
+* SCSS SASa Block-Grid.
 * --------------------------------------------------
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
@@ -316,7 +316,7 @@ img {
 body {
   font-family: "OpenSans-Light", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1em;
   color: #444444;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
