@@ -615,6 +615,51 @@ caption {
   padding-bottom: 0;
 }
 
+/** Core Media Elements */
+/*
+  Media Object
+
+  * Place any image- and text-like content side-by-side, as per:
+  * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+  * E.g.:
+  *
+  <div class="media">
+    <img src="http://placekitten.com/100/100" alt="" class="media-img>"
+    <p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  ========================================================================== */
+.media {
+  display: block;
+}
+
+.media-img {
+  float: left;
+  margin-right: 1em;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img--rev {
+  float: right;
+  margin-left: 1em;
+}
+
+.media-img img,
+.media-img--rev img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+}
+
+.media-body,
+.media-body > :last-child {
+  margin-bottom: 0;
+}
+
 /** Style */
 /** Background - Color - Position - Sizes - Blocks*/
 /** Font-icons */

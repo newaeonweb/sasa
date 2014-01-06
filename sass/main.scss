@@ -11,6 +11,7 @@
 
 /** Simple Reset */
 @import "compass/reset";
+
 // CSS3 Utilities
 @import "compass/css3";
 
@@ -24,6 +25,8 @@
 @import "modules/aeongrid";
 /** Core Typograph System*/
 @import "modules/typograph";
+/** Core Media Elements */
+@import "modules/media";
 
 // General App Style
 /** Style */
